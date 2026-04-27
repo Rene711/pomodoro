@@ -158,7 +158,9 @@
   <!-- svelte-ignore a11y_click_events_have_key_events -->
   <!-- svelte-ignore a11y_no_static_element_interactions -->
   <div id="clock" onclick={clockClick}>
-    <h1 style="font-size: 5em;user-select: none;">{clockFace}</h1>
+    <h1 style="font-size: 5em;user-select: none;">
+      {clockFace}
+    </h1>
   </div>
   <div id="button-container">
     <!-- svelte-ignore a11y_click_events_have_key_events -->
@@ -181,14 +183,14 @@
   {/if}
 </main>
 <div id="footer" style="">
-  <a href="/imprint">Imprint</a>
+  <a href="./imprint">Imprint</a>
   <p>&copy; Rene</p>
 </div>
 
 <style>
   #footer {
     width: 100%;
-    height: 20vh;
+    height: 20%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -201,8 +203,8 @@
     height: 30%;
   }
   main {
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -219,6 +221,9 @@
     border: 1px solid var(--accent);
     border-radius: 10px;
     transition: border 0.3s ease;
+  }
+  #clock > h1 {
+    color: var(--ctp-text) !important;
   }
   #button-container {
     width: 20%;
@@ -254,13 +259,20 @@
     }
 
     #clock {
-      width: 80%;
+      width: 100%;
+      max-width: 300px;
       height: auto;
     }
 
+    #clock:hover {
+      border: none;
+    }
+
     #button-container {
-      width: 90%;
+      width: 100%;
+      max-width: 300px;
       height: auto;
+      flex-wrap: wrap;
       border-width: 1px;
       animation: none; /* Disable fadeout on mobile */
       opacity: 1;

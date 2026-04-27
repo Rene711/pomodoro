@@ -18,7 +18,7 @@
 <style>
   main {
     padding: 1%;
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
   }
 </style>
